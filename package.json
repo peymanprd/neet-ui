@@ -1,0 +1,36 @@
+{
+  "name": "neet-ui",
+  "version": "0.0.1",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/neet-ui.umd.cjs",
+  "module": "./dist/neet-ui.js",
+  "exports": {
+    ".": {
+      "import": "./dist/neet-ui.js",
+      "require": "./dist/neet-ui.umd.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b --emitDeclarationOnly && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "neet-ui": "file:../neet-ui/dist",
+    "vue": "^3.4.31"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.2",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.40",
+    "tailwindcss": "^3.4.7",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.4",
+    "vue-tsc": "^2.0.24"
+  }
+}
